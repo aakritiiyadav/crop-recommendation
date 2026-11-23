@@ -179,6 +179,40 @@ st.markdown(textwrap.dedent("""
     .advisory-optimal {
         border-left-color: #4caf50;
     }
+
+    /* ✅ Always show the sidebar toggle button (expand arrow) */
+    [data-testid="collapsedControl"] {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+        background-color: #2e7d32 !important;
+        border-radius: 0 8px 8px 0 !important;
+        box-shadow: 2px 0 8px rgba(0,0,0,0.2) !important;
+    }
+
+    [data-testid="collapsedControl"] svg {
+        fill: #ffffff !important;
+        color: #ffffff !important;
+    }
+
+    /* Keep sidebar toggle arrow visible when sidebar is open */
+    [data-testid="stSidebarCollapseButton"] {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    [data-testid="stSidebarCollapseButton"] button {
+        background-color: rgba(255,255,255,0.1) !important;
+        border-radius: 8px !important;
+        color: #ffffff !important;
+    }
+
+    [data-testid="stSidebarCollapseButton"] button:hover {
+        background-color: rgba(255,255,255,0.25) !important;
+    }
+
 </style>
 """), unsafe_allow_html=True)
 
