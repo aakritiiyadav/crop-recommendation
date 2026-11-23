@@ -50,10 +50,39 @@ st.markdown(textwrap.dedent("""
     /* Main app background */
     .stApp {
         background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+        color: #1b4d3e !important;
+    }
+
+    /* Force all main content text to be visible (overrides dark mode) */
+    .stApp p, .stApp span, .stApp li, .stApp div,
+    .stApp label, .stApp small, .stApp strong, .stApp em,
+    [data-testid="stMarkdownContainer"] p,
+    [data-testid="stMarkdownContainer"] li,
+    [data-testid="stMarkdownContainer"] span {
+        color: #1b4d3e !important;
+    }
+
+    /* Widget labels (slider labels, number input labels etc) */
+    [data-testid="stWidgetLabel"] p,
+    .stSlider label, .stNumberInput label,
+    .stTextInput label, .stSelectbox label {
+        color: #1b4d3e !important;
+        font-weight: 500 !important;
+    }
+
+    /* Metric values and labels */
+    [data-testid="stMetric"] label,
+    [data-testid="stMetricLabel"] {
+        color: #1b4d3e !important;
+    }
+
+    /* Write / st.write text */
+    .stText, .stWrite {
+        color: #1b4d3e !important;
     }
     
     /* Title and headers */
-    h1, h2, h3, .stSubheader {
+    h1, h2, h3, h4, h5, h6, .stSubheader {
         color: #1b4d3e !important;
         font-weight: 700 !important;
     }

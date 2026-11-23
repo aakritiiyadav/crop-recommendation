@@ -119,8 +119,8 @@ ENV/
 env.bak/
 venv.bak/
 
-# Streamlit configs
-.streamlit/
+# Streamlit secrets only (not config)
+.streamlit/secrets.toml
 
 # OS-specific files
 .DS_Store
